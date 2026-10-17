@@ -6,17 +6,14 @@ public class MaxSubarraySum {
         int maxSum = arr[0];
         int currSum = arr[0];
 
-        for(int i = 1; i < arr.length; i++) {
-            int a = maxSum + arr[i];
+        for (int i = 1; i < arr.length; i++) {
+            int a = currSum + arr[i];
             int b = arr[i];
 
-            if(a > b) {
-                maxSum = a;
-            } else {
-                maxSum = b;
-            }
+            currSum = Math.max(a, b);
+            maxSum = Math.max(maxSum, currSum);
         }
-        
+
         System.out.println(maxSum);
     }
 }
