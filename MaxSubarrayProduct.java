@@ -17,7 +17,7 @@ public class MaxSubarrayProduct {
             maxProduct = Math.max(a, Math.max(b, c));
             minProduct = Math.min(a, Math.min(b, c));
 
-            result = Math.max(maxProduct, minProduct);
+            result = Math.max(result, Math.max(maxProduct, minProduct));
         }
         System.out.println(result);
         
